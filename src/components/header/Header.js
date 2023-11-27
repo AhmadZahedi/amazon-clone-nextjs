@@ -1,13 +1,26 @@
 export default function Header() {
-
+    const menuItems = [
+        {
+            label: 'Shop',
+            children: ['Men', 'Women']
+        },
+        {
+            label: 'On Sale',
+            children: []
+        },
+        {
+            label: 'New Arrivals',
+            children: []
+        },
+        {
+            label: 'Brands',
+            children: []
+        }
+    ];
     return(
-        <header className='w-100 h-32 bg-slate-300'>
-            <ul>
-                <li>menu</li>
-                <li>menu</li>
-                <li>menu</li>
-                <li>menu</li>
-            </ul>
+        <header className="w-100 py-6 px-24 bg-slate-300">
+            <div className="font-bold text-4xl">SHOP.CO</div>
+
         </header>
     )
 }
