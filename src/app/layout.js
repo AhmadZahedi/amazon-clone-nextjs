@@ -1,25 +1,24 @@
-"use client"
+// Styles
+import { satoshi, integralCf } from "@/app/fonts";
+import '@/styles/globals.scss';
 
-import '../styles/globals.css';
-import { Inter } from 'next/font/google';
+// Components
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 
-const inter = Inter({ subsets: ['latin'] });
-
 export const metadata = {
-  title: 'Shop.co',
-  description: 'A shop website',
+    title: 'Shop.co',
+    description: 'A shop website',
 };
 
 export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body className={inter.className + 'mx-auto'}>
-      <Header/>
-      {children}
-      <Footer />
-      </body>
-    </html>
-  )
+    return (
+        <html lang="en">
+        <body className={`${satoshi.className} ${integralCf.variable}`} >
+        <Header/>
+        {children}
+        <Footer/>
+        </body>
+        </html>
+    )
 };

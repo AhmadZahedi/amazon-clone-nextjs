@@ -19,7 +19,7 @@ export default function Header() {
     ];
     return(
         <header className="w-100 py-6 px-24 bg-slate-300">
-            <div className="font-bold text-4xl">SHOP.CO</div>
+            <div className="font-bold text-4xl font-integralCf">SHOP.CO</div>
 
         </header>
     )
