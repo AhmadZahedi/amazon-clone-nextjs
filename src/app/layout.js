@@ -3,7 +3,7 @@ import { satoshi, integralCf } from "@/app/fonts";
 import '@/styles/globals.scss';
 
 // Components
-import Header from "@/components/header/Header";
+import Header from "@/components/header/header";
 import Footer from "@/components/footer/Footer";
 
 export const metadata = {
