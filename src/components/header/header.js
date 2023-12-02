@@ -12,6 +12,7 @@ import {Avatar, Badge, Space} from 'antd';
 import SearchBar from "@/components/header/searchBar.component";
 import UserActions from "@/components/header/userActions.component";
 import MenuComponent from "@/components/header/menu.component";
+import Link from "next/link";
 
 export default function Header() {
     return (
@@ -29,10 +30,13 @@ export default function Header() {
                     <Space size={24}>
                         <button>
                             <Badge count={1}>
-                                <Avatar
-                                    shape="square"
-                                    style={{backgroundColor: 'transparent'}}
-                                    icon={<Image src={ShopIcon} alt="shop icon"/>}/>
+                                <Link href="/cart">
+                                    <Avatar
+                                        shape="square"
+                                        style={{backgroundColor: 'transparent'}}
+                                        icon={<Image src={ShopIcon} alt="shop icon"/>}
+                                    />
+                                </Link>
                             </Badge>
                         </button>
                     </Space>
