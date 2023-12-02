@@ -6,6 +6,9 @@ import '@/styles/globals.scss';
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 
+// Lib
+import StyledComponentsRegistry from "@/lib/AntdRegistry";
+
 export const metadata = {
     title: 'Shop.co',
     description: 'A shop website',
@@ -14,10 +17,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
-        <body className={`${satoshi.className} ${integralCf.variable}`} >
-        <Header/>
-        {children}
-        <Footer/>
+        <body className={`${satoshi.className} ${integralCf.variable}`}>
+        <StyledComponentsRegistry>
+            <Header/>
+            {children}
+            <Footer/>
+        </StyledComponentsRegistry>
         </body>
         </html>
     )
