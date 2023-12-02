@@ -9,7 +9,7 @@ import ShopIcon from '@/icons/shop.svg';
 import {Avatar, Badge, Space} from 'antd';
 
 // Components
-import SearchBar from "@/components/header/searchBar.comopnent";
+import SearchBar from "@/components/header/searchBar.component";
 import UserActions from "@/components/header/userActions.component";
 import MenuComponent from "@/components/header/menu.component";
 
