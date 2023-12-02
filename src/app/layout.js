@@ -5,7 +5,6 @@ import '@/styles/globals.scss';
 // Components
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/Footer";
-
 // Lib
 import StyledComponentsRegistry from "@/lib/AntdRegistry";
 
