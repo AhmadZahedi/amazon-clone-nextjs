@@ -45,8 +45,8 @@ export default function HeroSection() {
                 </div>
             </div>
 
-            <div className="sm:w-1/2 relative pl-1">
-                <div>
+            <div className="sm:w-1/2 relative">
+                <div >
                     <Image
                         src={heroImage}
                         alt="hero-image"
@@ -54,6 +54,7 @@ export default function HeroSection() {
                         height={636}
                         loading='lazy'
                         draggable='false'
+                        className='absolute bottom-0 right-8'
                     />
                 </div>
 
@@ -68,7 +69,7 @@ export default function HeroSection() {
                 <svg
                     width="56"
                     height="56"
-                    className='absolute top-[295px] left-[20px]'
+                    className='absolute top-[295px] left-[45px]'
                 >
                     <path fill="#000" d="M28 0c.95 15.053 12.947 27.05 28 28-15.053.95-27.05 12.947-28 28-.95-15.053-12.947-27.05-28-28 15.053-.95 27.05-12.947 28-28Z"/>
                 </svg>
