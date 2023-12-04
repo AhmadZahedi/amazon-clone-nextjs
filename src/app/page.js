@@ -1,10 +1,13 @@
+// Components
+import HeroSection from "@/components/HeroSection";
+import BrandsSection from "@/components/BrandsSection";
 
 export default function Main() {
     return (
         <>
-            <div className='text-[64px]'>
-                FIND CLOTHES THAT MATCHES YOUR STYLE
-            </div>
+            <HeroSection/>
+
+            <BrandsSection/>
         </>
     );
 }
