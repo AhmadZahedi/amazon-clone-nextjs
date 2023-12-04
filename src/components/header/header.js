@@ -13,14 +13,19 @@ import SearchBar from "@/components/header/searchBar.component";
 import UserActions from "@/components/header/userActions.component";
 import MenuComponent from "@/components/header/menu.component";
 import Link from "next/link";
+import MobileMenu from "@/components/header/mobileMenu.component";
 
 export default function Header() {
     return (
-        <header className="w-100 py-6 px-24">
+        <header className="container py-6 px-2">
             <div className="flex gap-10 items-center justify-between">
+                <div className="block md:hidden">
+                    <MobileMenu />
+                </div>
+
                 <button className="font-bold text-4xl font-integralCf">SHOP.CO</button>
 
-                <div className="w-[380px]">
+                <div className="w-[380px] md:block hidden">
                     <MenuComponent />
                 </div>
 
