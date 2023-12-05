@@ -6,86 +6,27 @@ import Image from 'next/image';
 import ShopIcon from '@/icons/shop.svg';
 
 // Ant Design
-import {DownOutlined} from '@ant-design/icons';
-import {Menu, Avatar, Badge, Space} from 'antd';
-
-// React
-import {useState} from "react";
+import {Avatar, Badge, Space} from 'antd';
 
 // Components
-import SearchBar from "@/components/header/searchBar";
-import UserActions from "@/components/header/userActions";
+import SearchBar from "@/components/header/searchBar.component";
+import UserActions from "@/components/header/userActions.component";
+import MenuComponent from "@/components/header/menu.component";
+import Link from "next/link";
+import MobileMenu from "@/components/header/mobileMenu.component";
 
 export default function Header() {
-
-    const items = [
-        {
-            label: 'Shop',
-            key: 'shop',
-            icon: <DownOutlined/>,
-            children: [
-                {
-                    type: 'group',
-                    label: 'Men Clothes',
-                    children: [
-                        {
-                            label: 'Jeans',
-                            key: 'men jeans'
-                        },
-                        {
-                            label: 'Shirts',
-                            key: 'men shirts'
-                        }
-                    ]
-                },
-                {
-                    type: 'group',
-                    label: 'Women Clothes',
-                    children: [
-                        {
-                            label: 'Jeans',
-                            key: 'women jeans'
-                        },
-                        {
-                            label: 'Shirts',
-                            key: 'women shirts'
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            label: 'On Sale',
-            key: 'on sale'
-        },
-        {
-            label: 'New Arrivals',
-            key: 'new arrivals'
-        },
-        {
-            label: 'Brands',
-            key: 'brands'
-        }
-    ];
-
-    const [currentMenu, setCurrentMenu] = useState('men jeans');
-
-    function changeMenu(e) {
-        setCurrentMenu(e.key)
-    }
-
     return (
-        <header className="w-100 py-6 px-24">
+        <header className="container py-6 px-2">
             <div className="flex gap-10 items-center justify-between">
+                <div className="block md:hidden">
+                    <MobileMenu />
+                </div>
+
                 <button className="font-bold text-4xl font-integralCf">SHOP.CO</button>
 
-                <div className="w-[380px]">
-                    <Menu
-                        mode="horizontal"
-                        items={items}
-                        selectedKeys={[currentMenu]}
-                        onClick={changeMenu}
-                    />
+                <div className="w-[380px] md:block hidden">
+                    <MenuComponent />
                 </div>
 
                 <SearchBar />
@@ -94,10 +35,13 @@ export default function Header() {
                     <Space size={24}>
                         <button>
                             <Badge count={1}>
-                                <Avatar
-                                    shape="square"
-                                    style={{backgroundColor: 'transparent'}}
-                                    icon={<Image src={ShopIcon} alt="shop icon"/>}/>
+                                <Link href="/cart">
+                                    <Avatar
+                                        shape="square"
+                                        style={{backgroundColor: 'transparent'}}
+                                        icon={<Image src={ShopIcon} alt="shop icon"/>}
+                                    />
+                                </Link>
                             </Badge>
                         </button>
                     </Space>
