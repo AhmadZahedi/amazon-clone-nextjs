@@ -10,8 +10,8 @@ import Image from "next/image";
 export default function BrandsSection() {
 
     return(
-        <div className='bg-black px-[100px] py-10'>
-            <div className='w-100 h-[32px] flex justify-between'>
+        <div className='bg-black px-4 sm:px-[100px] py-10 overflow-hidden'>
+            <div className='w-100 sm:h-[32px] flex flex-wrap max-md:gap-4 justify-between'>
                 <Image
                     src={versaceLogoImage}
                     alt='logo'
